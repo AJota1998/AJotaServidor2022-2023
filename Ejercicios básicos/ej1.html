@@ -7,6 +7,10 @@
     <title>ej1</title>
 </head>
 <body>
+                                        
+    <input type="text" id="input1">
+    <input type="button" value="añadir texto" onclick="funcion1()">
+    <div id="div1"></div>
 
     <script>
                                     // ejercicio1//
@@ -50,10 +54,32 @@
         let num2 = prompt("Introduzca número 2 ");
         let num3 = prompt("Introduzca número 3 ");
         let num4 = prompt("Introduzca número 4 ");
-            alert("La suma de los dos primeros es: " + (parseInt(num1)+ parseInt(num2)));
+            alert("La suma de los dos primeros es: " + (parseInt(num1) + parseInt(num2)));
             alert("El producto del tercero y el cuarto es: " + (parseInt(num3) * parseInt(num4)));
 
+                                    //ejercicio4//
+        let numdec1 = prompt("Introduzca número 1 ");
+        let numdec2 = prompt("Introduzca número 2 ");
+        let numdec3 = prompt("Introduzca número 3 ");
+        let numdec4 = prompt("Introduzca número 4 ");
+            alert("La suma de los 4 es : " + (parseFloat(numdec1) + parseFloat(numdec2) + parseFloat(numdec3) + parseFloat(numdec4)));
+            alert("El producto de los 4 es : " + (parseFloat(numdec1) * parseFloat(numdec2) * parseFloat(numdec3) * parseFloat(numdec4)));
+            alert("La resta de los 2 primeros es : " + (parseFloat(numdec1) - parseFloat(numdec2)));
+            alert("La división de los 2 últimos es : " + (parseFloat(numdec3) / parseFloat(numdec4)));    
 
+                                    //ejercicio5//
+            let precio = prompt("Introduzca el precio del artículo");
+            let cantidad = prompt("Introduzca la cantidad");
+                alert("Usted deberá abonar la cantidad de: " + (parseFloat(precio) * parseInt(cantidad)) + " €");
+
+                                    //ejercicio6//
+            
+        function funcion1() {
+            let variable1 = document.getElementById("input1").value 
+            document.getElementById("div1").innerHTML = variable1
+        } 
+            
+            
     </script>
 </body>
 </html>
