@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>1</title>
+</head>
+<body>
+    <input type="text" id="input1">
+    <input type="text" id="input2">
+    <input type="button" value="¿Quién es el mayor?" onclick="funcion2() //funcion1">
+    
+    <script>
+        function funcion1() {
+            let variable1 = document.getElementById("input1").value;
+            let variable2 = document.getElementById("input2").value;
+
+            if (variable1 < variable2) {
+                alert("El mayor de los dos es: " + variable2);
+            } else if (variable1 == variable2) {
+                alert("Los dos son iguales");
+            } else {
+                alert("El mayor de los dos es: " + variable1);
+            }
+        }
+        
+        function funcion2() {
+            let variable1 = document.getElementById("input1").value;
+            let variable2 = document.getElementById("input2").value;
+                let mensaje = (variable1 > variable2) ? "Es mayor " + variable1 : 
+                (variable1 < variable2) ? "Es mayor " + variable2 :
+                "Son iguales";
+            alert(mensaje);
+        }
+    </script>
+    
+</body>
+</html>

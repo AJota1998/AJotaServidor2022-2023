@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3</title>
+</head>
+<body>
+    <input type="radio" id="boton1" name="opcion" value="opcion1" onclick="funcion1()">
+    <label for="html">opcion1</label><br>
+    <input type="radio" id="boton2" name="opcion" value="opcion2" onclick="funcion1()">
+    <label for="css">opcion2</label><br>
+    <input type="radio" id="boton3" name="opcion" value="opcion2" onclick="funcion1()">
+    <label for="javascript">opcion3</label>
+    
+    <script>
+
+            function funcion1() {
+                let seleccionado;
+            
+            seleccionado = (document.getElementById("boton1").checked) ? "Opcion 1 " :  
+            (document.getElementById("boton2").checked) ? "Opcion 2 " :
+            "Opcion 3"; 
+            alert(seleccionado); 
+        }
+        
+
+    </script>
+</body>
+</html>
