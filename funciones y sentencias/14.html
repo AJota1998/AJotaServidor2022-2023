@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14</title>
+</head>
+<body>
+
+    <script>
+
+        let bucle = 1
+        let numeros = ""
+        let conteo = 0
+        
+        while(bucle <= 200) {
+        
+            if (bucle % 5 == 0) {
+                numeros += bucle + " "
+            }
+
+            if (isPrime(bucle) == false) {
+                conteo++
+            }
+
+        bucle++
+
+        }
+
+        function isPrime(numero) {
+        
+        if (numero <= 1) return false;
+            for (var i = 2; i <= numero-1; i++)
+                if (numero % i == 0) return false;
+        return true;
+        }
+
+
+        alert("Números múltiplos de 5:  " + numeros)
+        alert("Número de números NO primos:  " + conteo)
+
+    </script>
+    
+</body>
+</html>

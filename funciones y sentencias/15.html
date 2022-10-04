@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>15</title>
+</head>
+<body>
+
+    <input type="text" id="dia">
+    <input type="button" value="Validar" onclick="funcion1()">
+    <div id="div1"></div>
+    
+    <script>
+
+        function funcion1() {
+            switch (document.getElementById("dia").value) {
+                case "lunes" : 
+                    document.getElementById("div1").innerHTML += "martes" + " ";
+                    break;
+                case "martes" :
+                    document.getElementById("div1").innerHTML += "miercoles" + " ";
+                    break;
+                case "miercoles" : 
+                    document.getElementById("div1").innerHTML += "jueves" + " ";
+                    break;
+                case "jueves" : 
+                    document.getElementById("div1").innerHTML += "viernes" + " ";
+                    break;
+                case "viernes" : 
+                    document.getElementById("div1").innerHTML += "sabado" + " ";
+                    break;
+                case "sabado" : 
+                    document.getElementById("div1").innerHTML += "domingo" + " ";
+                    break;
+                case "domingo" :
+                    document.getElementById("div1").innerHTML += "lunes" + " ";
+                    break;
+                default : 
+                    alert("Dato erroneo, introduzca dias en minuscula y sin tildes");
+            }   
+
+        }
+
+    </script>
+
+</body>
+</html>

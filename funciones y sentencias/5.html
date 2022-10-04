@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>5</title>
+</head>
+<body>
+    
+    <script>
+
+        let nota1 = prompt("Introduzca nota 1")
+        let nota2 = prompt("Introduzca nota 2")
+        let nota3 = prompt("Introduzca nota 3")
+
+            let promedio = ((parseInt(nota1) + parseInt(nota2) + parseInt(nota3)) / 3);
+            let mensaje = (promedio < 5) ? "Repetidor" :
+            (promedio >= 5 && promedio < 7) ? "Superado" : 
+            (promedio >= 7 && promedio <= 10) ? "Promocionado" : 
+            "Error, prueba otra vez"
+            
+            alert(mensaje);
+
+
+    </script>
+
+</body>
+</html>
