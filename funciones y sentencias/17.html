@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>17</title>
+</head>
+<body>
+
+    <input type="text" id="nombre" placeholder="nombre"> 
+    <input type="text" id="cantidad" placeholder="preguntas">
+    <input type="text" id="correctas" placeholder="aciertos">
+    <input type="button" value=" validar" id="validar" onclick="funcion1()">
+    <div id="result"></div>
+
+    <script>
+
+        function funcion1() {
+            let nombre = document.getElementById("nombre").value
+            let preguntas = document.getElementById("cantidad").value
+            let aciertos = document.getElementById("correctas").value
+
+            let resultado = ((parseInt(aciertos) * 100) / parseInt(preguntas));
+
+            let mensaje = (resultado < 50) ? "Fuera de nivel " + resultado + " %" : 
+            (resultado >= 50 && resultado < 75) ? "Nivel bajo " + resultado + " %" : 
+            (resultado >= 75 && resultado < 90) ? "Nivel medio " + resultado + " %" : 
+            (resultado >= 90 && resultado <= 100) ? "Nivel superior " + resultado + " %" : 
+            "Error en los datos"; 
+
+            let escribir = document.getElementById("result").innerHTML += "Resultado de " + nombre + ": " + mensaje + " ";
+        }
+
+    </script>
+    
+</body>
+</html>

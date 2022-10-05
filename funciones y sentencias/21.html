@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>21</title>
+</head>
+<body>
+
+    <script>
+
+        let numero = prompt("Introduzca un número")
+
+
+        function funcion1(num) {
+            const inicio = 1;
+            let indice = 0;
+            let array = [];
+            
+            while (num >= inicio) {
+                array[indice] = num
+                indice++
+                num--
+            }
+            return alert(array);
+        }
+        
+        funcion1(numero);
+
+    </script>
+    
+</body>
+</html>

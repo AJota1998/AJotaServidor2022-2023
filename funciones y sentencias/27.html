@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>27</title>
+</head>
+<body>
+
+    <input type="text" id="texto" value="Introduzca cadena">
+    <input type="button" value="calcular" onclick="funcion1()">
+
+    <script>
+
+    function funcion1() {
+
+    let cadena = document.getElementById("texto").value
+    let nuevoarray = new Array(27) 
+    let arrayletras = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','ñ',
+    'o','p','q','r','s','t','u','v','w','x','y','z']
+    let contador
+    let indice = 0
+    let suma = 0
+    let porcentaje
+
+    for (let i = 0; i <arrayletras.length; i++) {
+    contador = 0
+        for (let j = 0; j <cadena.length; j++) {
+            if (cadena[j] == arrayletras[i]) {
+                contador++;
+            }
+        }
+        nuevoarray[indice] = contador
+        indice++
+    }
+
+    for (let y = 0; y < arrayletras.length; y++) {
+        document.write(arrayletras[y] + " : " + nuevoarray[y] + "<br>")
+    }
+
+    for (let z = 0; z < nuevoarray.length; z++) {
+        suma += nuevoarray[z]
+    }
+
+    for (let m = 0; m < nuevoarray.length; m++) {
+        if (nuevoarray[m] != 0) {
+            porcentaje = (nuevoarray[m] / suma) * 100
+            document.write("El porcentaje de " + arrayletras[m] + " es:"+ porcentaje + " %"+ "<br>")
+        }
+    }
+}  
+
+    </script>
+    
+</body>
+</html>

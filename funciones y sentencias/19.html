@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19</title>
+</head>
+<body>
+
+    <script>
+
+        let mes = prompt("Introduzca el mes");
+        let year = prompt("Introduzca el año");
+
+        switch (mes) {
+            case "enero":
+                alert("31 días");
+                break;
+            case "febrero":
+                if (bisiesto(parseInt(year))){
+                    alert("Año bisiesto, 29 días");
+                } else {
+                    alert("Año no bisiesto, 28 días");
+                }
+                break;
+            case "marzo":
+                alert("31 días");
+                break;
+            case "abril":
+                alert("30 días");
+                break;
+            case "mayo":
+                alert("31 días");
+                break;
+            case "junio":
+                alert("30 días");
+                break;
+            case "julio":
+                alert("31 días");
+                break;
+            case "agosto":
+                alert("31 días");
+                break;
+            case "septiembre":
+                alert("30 días");
+                break;
+            case "octubre":
+                alert("31 días");
+                break;
+            case "noviembre":
+                alert("30 días");
+                break;
+            case "diciembre":
+                alert("31 días");
+                break;
+            default :
+                alert("Introduzca un mes válido en minúsculas");
+        }
+
+        function bisiesto(n) {
+            return (n % 400 === 0) ? true : 
+            (n % 100 === 0) ? false : 
+            n % 4 === 0;
+        }
+
+    </script>
+    
+</body>
+</html>

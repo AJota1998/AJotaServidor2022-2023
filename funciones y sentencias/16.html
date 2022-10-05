@@ -10,7 +10,14 @@
 
     <script>
 
-        
+       let valor1 = prompt("Introduzca valor 1")
+       let valor2 = prompt("Introduzca valor 2")
+       let valor3 = prompt("Introduzca valor 3")
+       
+       let mensaje = (parseInt(valor1) == parseInt(valor2) && parseInt(valor1) == parseInt(valor3)) ? "Resultado: " + ((parseInt(valor1) + parseInt(valor2)) * parseInt(valor3)) : 
+       "Los 3 números no son iguales";
+
+       alert(mensaje);
 
     </script>
     

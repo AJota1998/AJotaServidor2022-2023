@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>26</title>
+</head>
+<body>
+    <p>Introduce los números separados por espacios</p>
+    <input type="text" id="texto">
+    <input type="button" onclick="cargar()" value="Cargar Ejemplo">
+    <input type="button" onclick="calcular()" value="Calcular">
+    <input type="button" onclick="reiniciar()" value="Reiniciar">
+    <div id="div1"></div>
+
+    <script>
+
+    function cargar() {
+
+        document.getElementById("texto").value = "40,10,56,89"
+    }
+    
+    function calcular() {
+
+        let texto = document.getElementById("texto").value 
+        let miarray = texto.split(',')
+
+        let suma = 0
+        miarray.forEach(element => {suma+= Number(element)})
+
+        let media = (suma / miarray.length)
+        miarray.sort()
+
+        document.getElementById("div1").innerHTML += "Suma de los elementos: "  + suma + "<br>" + 
+        "Media de los elementos: "  + media +  "<br>" +
+        "El mayor es: " + miarray[miarray.length -1] + "<br>" + 
+        "El menor es : " + miarray[0] 
+
+    }
+
+    function reiniciar() {
+
+        document.getElementById("div1").innerHTML = ""
+        document.getElementById("texto").value = ""
+    } 
+
+    </script>
+    
+</body>
+</html>

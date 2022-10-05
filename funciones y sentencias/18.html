@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>18</title>
+</head>
+<body>
+
+    <script>
+
+        let sueldo = prompt("Introduzca el sueldo")
+        let antiguedad = prompt("Introduzca la antiguedad")
+
+        let actualizado = (parseInt(sueldo) < 1000 && parseInt(sueldo) > 0 && antiguedad >= 10) ? "Nuevo sueldo: " + (parseInt(sueldo) * 1.2) : 
+        (parseInt(sueldo) < 1000 && parseInt(sueldo) > 0 && antiguedad < 10) ? "Nuevo sueldo: " + (parseInt(sueldo) * 1.05) : 
+        (parseInt(sueldo) >= 1000) ? "Su sueldo se mantiene en: " + sueldo :
+        "No nos cuadra que usted cobre " + sueldo;
+        
+        alert(actualizado);
+        
+    </script>
+    
+</body>
+</html>

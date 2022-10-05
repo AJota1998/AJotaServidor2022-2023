@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>24</title>
+</head>
+<body>
+    
+    <script>
+    
+    let cantidadInicial = 50
+    alert("Dispone de " + cantidadInicial + " € para apostar")
+
+    while (cantidadInicial > 0 && cantidadInicial < 200) {
+
+    let apuesta= prompt("Introduzca su apuesta")
+
+    cantidadInicial = cantidadInicial - parseInt(apuesta)
+    alert("tienes: " + cantidadInicial + " €")
+
+    let numero = prompt("Introduzca un número del 1 al 6")
+    let azar = Math.floor(Math.random() * (7 - 1) + 1)
+    alert("Número de la máquina: " + azar)
+
+        if (parseInt(numero) == azar) {
+            cantidadInicial += parseInt(apuesta) * 2
+            alert("¡ACIERTO! Ganaste: " + cantidadInicial + " €")
+        } 
+    }   
+
+    alert("Te quedaste sin dinero: " + cantidadInicial + " €")
+
+    </script>
+
+</body>
+</html>

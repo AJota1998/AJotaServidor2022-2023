@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>23</title>
+</head>
+<body>
+
+    <input type="text" id="BI" placeholder="Base Imponible"> 
+    <input type="text" id="IVA" placeholder="IVA 21 o 10">
+    <input type="text" id="peso" placeholder="peso en KG">
+    <input type="button" value=" validar" id="validar" onclick="funcion1()">
+    <div id="result"></div>
+
+    <script>
+
+        alert("Los valores que no sean correctos serán iguales a 0")
+
+        function funcion1() {
+            let base = document.getElementById("BI").value
+            let IVA = document.getElementById("IVA").value
+            let peso = document.getElementById("peso").value
+
+            let baseIm = (base > 0) ? base : 0;
+            let iva = (IVA == 10 || IVA == 21) ? IVA : 0;
+            let envio = (peso < 1) ? 3 : (peso >=1 && peso < 3) ? 5 : (peso >= 3) ? 10 : 0
+
+            let resultado = ((parseInt(baseIm) + (parseInt(baseIm) * parseInt(iva) / 100)) + parseInt(envio));
+            
+            let escribir = document.getElementById("result").innerHTML += parseInt(resultado) + " "; 
+        }
+
+    </script>
+    
+</body>
+</html>

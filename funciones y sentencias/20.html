@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>20</title>
+</head>
+<body>
+
+    <input type="text" id="marca" placeholder="ejemplo: 'Renault'"> 
+    <input type="text" id="modelo" placeholder="ejemplo: 'Megane'">
+    <input type="button" value="comprobar descuento" id="dto" onclick="funcion1()">
+    <div id="div1"></div>
+
+    <script>
+
+        function funcion1() {
+            let marca = document.getElementById("marca").value 
+            let modelo = document.getElementById("modelo").value
+
+            let descuento = (marca == "Renault") ? "Posee un descuento del 15%" : 
+            (marca == "Ford" && modelo == "Fiesta") ? "Posee un descuento del 7%" : 
+            (marca == "Ford" && modelo == "Focus") ? "Posee un descuento del 10%" : 
+            (marca == "Ford") ? "Posee un descuento del 5%" : 
+            "Marca desconocida, sin descuento o sin el formato de ejemplo"
+            
+            let escribir = document.getElementById("div1").innerHTML += descuento + " ";
+
+        }
+
+    </script>
+    
+</body>
+</html>

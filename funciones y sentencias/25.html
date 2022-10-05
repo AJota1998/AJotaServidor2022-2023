@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>25</title>
+</head>
+<body>
+
+    <input type="text" id="cad">
+    <input type="button" id="validar" value="Validar" onclick="funcion1()">
+    <div id="div1"></div>
+
+    <script>
+    
+    function funcion1() {
+    let cadena = document.getElementById("cad").value 
+    
+    let miarray = cadena.split(' ')
+    let elementofinal = miarray[miarray.length -1]
+
+    document.getElementById("div1").innerHTML += 
+    ("Número de palabras: " + miarray.length + "<br>" + "Primera palabra: " + 
+    miarray[0] + "<br>" + "Última palabra " + elementofinal)
+    }
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>28</title>
+</head>
+<body>
+
+    <input type="text" id="fecha" placeholder="ej: 01/09">
+    <input type="button" id="validar" value="Validar" onclick="funcion1()">
+
+    <script>
+
+    function funcion1() {
+    
+    let fecha = document.getElementById("fecha").value 
+    let elementos = fecha.split('/')
+
+        switch (elementos[1]) {
+            case "01":
+                if (elementos[0] >= "01" && elementos[0] <="19") {
+                    alert("CAPRICORNIO")
+                } else {
+                    alert("ACUARIO")
+                }
+                break;
+            case "02":
+                if (elementos[0] >= "01" && elementos[0] <="18") {
+                    alert("ACUARIO")
+                } else {
+                    alert("PISCIS")
+                }
+                break;
+            case "03":
+                if (elementos[0] >= "01" && elementos[0] <="20") {
+                    alert("PISCIS")
+                } else {
+                    alert("ARIES")
+                }
+                break;
+            case "04":
+                if (elementos[0] >= "01" && elementos[0] <="19") {
+                    alert("ARIES")
+                } else {
+                    alert("TAURO")
+                }
+                break;
+            case "05":
+                if (elementos[0] >= "01" && elementos[0] <="20") {
+                    alert("TAURO")
+                } else {
+                    alert("GEMINIS")
+                }
+                break;
+            case "06":
+                if (elementos[0] >= "01" && elementos[0] <="20") {
+                    alert("GEMINIS")
+                } else {
+                    alert("CANCER")
+                }
+                break;
+            case "07":
+                if (elementos[0] >= "01" && elementos[0] <="22") {
+                    alert("CANCER")
+                } else {
+                    alert("LEO")
+                }
+                break;
+            case "08":
+                if (elementos[0] >= "01" && elementos[0] <="22") {
+                    alert("LEO")
+                } else {
+                    alert("VIRGO")
+                }
+                break;
+            case "09":
+                if (elementos[0] >= "01" && elementos[0] <="22") {
+                    alert("VIRGO")
+                } else {
+                    alert("LIBRA")
+                }
+                break;
+            case "10":
+                if (elementos[0] >= "01" && elementos[0] <="22") {
+                    alert("LIBRA")
+                } else {
+                    alert("ESCORPIO")
+                }
+                break;
+            case "11":
+                if (elementos[0] >= "01" && elementos[0] <="21") {
+                    alert("ESCORPIO")
+                } else {
+                    alert("SAGITARIO")
+                }
+                break;
+            case "12":
+                if (elementos[0] >= "01" && elementos[0] <="21") {
+                    alert("SAGITARIO")
+                } else {
+                    alert("CAPRICORNIO")
+                }
+                break;
+            default :
+                alert("MES NO VÁLIDO")
+        }
+    }
+
+
+
+    </script>
+    
+</body>
+</html>
