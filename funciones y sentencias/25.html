@@ -16,14 +16,24 @@
     
     function funcion1() {
     let cadena = document.getElementById("cad").value 
-    
+
+    try {
+     
+    if (cadena == "") throw "Cadena vacia"
+
     let miarray = cadena.split(' ')
     let elementofinal = miarray[miarray.length -1]
 
-    document.getElementById("div1").innerHTML += 
+    let escribir = document.getElementById("div1").innerHTML += 
     ("Número de palabras: " + miarray.length + "<br>" + "Primera palabra: " + 
-    miarray[0] + "<br>" + "Última palabra " + elementofinal)
+    miarray[0] + "<br>" + "Última palabra " + elementofinal + "<br>")
+     
+    } catch (error) {
+    alert("Cadena vacía")
     }
+    
+    }
+
 
     </script>
     
