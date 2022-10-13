@@ -1,4 +1,4 @@
-function validar() {
+
     const $FORM = document.getElementById("ej3"); 
     const $DNI = document.getElementById("IMPdni");
     const $NOMBRE = document.getElementById("IMPnombre");
@@ -63,4 +63,4 @@ function validar() {
       }
       
       $FORM.addEventListener('submit', handleSubmit)
-  }
+  

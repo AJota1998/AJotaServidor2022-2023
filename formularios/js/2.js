@@ -1,4 +1,4 @@
-function validar() {
+
     const $FORM = document.getElementById("ej2");
     const $NOMBRE = document.getElementById("ImputNombre");
     const $APELLIDOS = document.getElementById("ImputApellidos");
@@ -47,5 +47,5 @@ function validar() {
       }
 
       $FORM.addEventListener('submit', handleSubmit)
-  }
+  
   

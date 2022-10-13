@@ -1,4 +1,4 @@
-function validar() {
+
   const $FORM = document.getElementById("ej1"); //El motivo de utilizar const es porque es un objeto, también podemos usar let sin problema
   const $DNI = document.getElementById("IMPdni");
   const $NOMBRE = document.getElementById("IMPnombre");
@@ -63,4 +63,3 @@ function validar() {
     }
     
     $FORM.addEventListener('submit', handleSubmit)
-}

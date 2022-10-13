@@ -1,4 +1,4 @@
-function registrarUser() {
+
     const $FORM = document.getElementById('Ej1');
     const $NAME = document.getElementById('nombre');
     const $SURNAME = document.getElementById('apellido');
@@ -63,4 +63,3 @@ function registrarUser() {
     }
     
     $FORM.addEventListener('submit', handleSubmit);
-}
