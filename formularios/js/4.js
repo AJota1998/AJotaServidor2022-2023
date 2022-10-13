@@ -37,7 +37,7 @@
       }
   
       function isValidCocinero(cocinero) {
-      const validacion = /^[A-Z]{2}\/[[:punct:]]\/\d{4}$/
+      const validacion = /^[A-Z]{2}[[:punct:]]\d{4}$/
       return validacion.test(cocinero)
       }
   
