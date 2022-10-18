@@ -27,13 +27,13 @@ document.cookie = n + "=" + v + ";" + exp;
 
 function getCookie() {
 
-let cname = prompt("Introduzca el nombre de la cookie a leer")
-let v = cname + "=";
+let n = prompt("Introduzca el nombre de la cookie a leer")
+let v = n + "=";
 let ca = document.cookie.split(";"); //Divide la cookie separando por ;
     
     for (let i = 0; i < ca.length; i++) { //Recorre cada trozo de la cookie
     let c = ca[i];
-        while (c.charAt(0) == "") {
+        while (c.charAt(0) == " ") {
         c = c.substring(1);
         }
 
@@ -52,9 +52,9 @@ function checkCookie() {
 let v = getCookie(); //Extrae el value de la función anterior
     
     if (v != "") {
-        alert("Valor de la cookie: " + v) //Nos muestra el valor de la cookie con el nombre que hemos introducido
-    } else if (v != "" && v != null) { //si no existe esa cookie llama al metodo de creacion 
-        setCookie() 
+        alert("Valor: " + v);
+    } else {
+        setCookie();
     }
 
 }

@@ -47,8 +47,8 @@
       }
   
       function isValidGramos(gramos) {
-          const validacion = /^(.+\@.+\..+)$/
-          return validacion.test(gramos)
+          let resultado = (gramos >= 100 && gramos <= 5000) ? true : false 
+          return resultado;  
       }
   
       function isvalidComposicion(composicion) {
