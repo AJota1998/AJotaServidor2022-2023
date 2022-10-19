@@ -58,7 +58,7 @@
       }
   
       function isValidDestinatario(destinatario) {
-      const validacion = /^\d{1,2}\/\d{1,2}\/\d{2,4}$/
+      const validacion =  /^[A-Z]{2,3}(_alburquerque:)[0-9]{4}$/;
       return validacion.test(destinatario)
       }
   
@@ -66,14 +66,14 @@
           let resultado = (gramos >= 100 && gramos <= 5000) ? true : false 
           return resultado;  
       }
-  
+      //Estas dos validaciones no termino de hacer que me funcionen, es lo único que me falta de todos los ejercicios
       function isvalidComposicion(composicion) {
-        const validacion = /^(ftp|http|https):\/\/[^ "]+$/
+        const validacion = /^$/
         return validacion.test(composicion)
       }
   
       function isvalidNCuenta(ncuenta) {
-          const validacion = /^(?=\w*\d)(?=\w*[A-Z])(?=\w*[a-z])\S{8,10}$/
+          const validacion = /^$/
           return validacion.test(ncuenta)
       }
       
