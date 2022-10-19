@@ -24,7 +24,12 @@
       console.log(regUsuario)
       let newUser = JSON.stringify(regUsuario)
       console.log(newUser)
+
+      setCookie(regUsuario.nombre, regUsuario.nombre + " " + regUsuario.apellidos, 1);
+      setCookie(regUsuario.email, regUsuario.email, 1);
+
     }
+
 
       function isValidNombre(nombre) {
       const validacion = /^(([a-zA-ZáéíóúñÑÁÉÍÓÚ]+)|([a-zA-ZáéíóúñÑÁÉÍÓÚ]+\s[a-zA-ZáéíóúñÑÁÉÍÓÚ]+))$/

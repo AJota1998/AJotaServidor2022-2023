@@ -9,77 +9,60 @@ if (navigator.cookieEnabled == true) {
 
 //creación de la cookie 
 
-function setCookie() {
+function setCookie(n, v, exp) {
 
-let n = prompt("Introduzca nombre de cookie")
-let v = prompt("Introduzca valor de la cookie")
-let exd = parseInt(prompt("Introduzca el número de dias hasta que esta expire"))
 let d = new Date();
 
-d.setTime(d.getTime() + exd * 24 * 60 * 60 * 1000);
-let exp = "expires=" + d.toUTCString(); 
-document.cookie = n + "=" + v + ";" + exp;
+d.setTime(d.getTime() + exp * 24 * 60 * 60 * 1000);
+let expira = "expires=" + d.toUTCString();
+document.cookie = n + "=" + v + ";" + expira;
 
 }
   
 
 //Leer el value de la cookie
 
-function getCookie() {
+function getCookie(n) {
 
-let n = prompt("Introduzca el nombre de la cookie a leer")
-let v = n + "=";
-let ca = document.cookie.split(";"); //Divide la cookie separando por ;
-    
-    for (let i = 0; i < ca.length; i++) { //Recorre cada trozo de la cookie
-    let c = ca[i];
+let name = n + "=";
+let separador = document.cookie.split(";");
+
+    for (let i = 0; i < separador.length; i++) {
+        let c = separador[i];
         while (c.charAt(0) == " ") {
-        c = c.substring(1);
+            c = c.substring(1);
         }
-
-    if (c.indexOf(v) == 0 ) //Si encuentra el campo buscado
-    return c.substring(v.length, c.length) //lo devuelve
+        if (c.indexOf(n) == 0) {
+        return c.substring(name.length, c.length);
+        }
     }
+    return "";
 
-    return ""; //Si no devuelve vacío
-
-}
+  }
 
 //Comprobar si la cookie está inicializada
 
-function checkCookie() {
+function checkCookie(n) {
 
-let v = getCookie(); //Extrae el value de la función anterior
+let v = getCookie(n); //Extrae el value de la función anterior
     
     if (v != "") {
-        alert("Valor: " + v);
+        alert("valor: " + v);
     } else {
-        setCookie();
+        updateCookie();
     }
 
 }
 
-//Actualizar la cookie, simplemente se llama desde dentro a la funcion de creacion
+//Actualizar la cookie
 
 function updateCookie() {
+
+let n = prompt("Introduzca el n de la cookie");
+let v = prompt("Introduzca el v de la cookie");
+let exp = parseInt(prompt("Introduzca el numero de dias hasta su expiración"));
     
-setCookie()
-
-}
-
-//Eliminar la cookie
-
-function deleteCookie() {
-
-let n = prompt("Introduzca el nombre de la cookie a borrar")
-let v = prompt("Introduzca el valor de la cookie a borrar")
-let d = new Date();
-
-d.setTime(d.getTime() - 1 * 24 * 60 * 60 * 1000);
-let exp = "expires=" + d.toUTCString(); 
-
-document.cookie = n + "=" + v + ";" + exp;
-
+setCookie(n, v, exp)
 
 }
 
@@ -87,9 +70,21 @@ document.cookie = n + "=" + v + ";" + exp;
 
 function cookies() {
 
-alert("Estas son las cookies actuales: \n" + document.cookie)
+    alert("Estas son las cookies actuales: \n" + document.cookie)
+    
+}
+
+//Eliminar la cookie
+
+function deleteCookie() {
+
+let n = prompt("Introduzca el nombre de la cookie a eliminar");
+setCookie(n, "", -1);
+
 
 }
+
+
 
 
 

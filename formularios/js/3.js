@@ -30,6 +30,24 @@
       console.log(regUsuario)
       let newUser = JSON.stringify(regUsuario)
       console.log(newUser)
+
+      sessionStorage.setItem("DNI", regUsuario.dni);
+      sessionStorage.setItem("Nombre", regUsuario.nombre);
+      sessionStorage.setItem("Fecha", regUsuario.fecha);
+      sessionStorage.setItem("Email", regUsuario.email);
+      sessionStorage.setItem("Web", regUsuario.web);
+      sessionStorage.setItem("Password", regUsuario.password);
+    }
+
+    function recargar() {
+
+      $DNI.value = sessionStorage.getItem("DNI");
+      $NOMBRE.value = sessionStorage.getItem("Nombre");
+      $FECHA.value = sessionStorage.getItem("Fecha");
+      $EMAIL.value = sessionStorage.getItem("Email");
+      $WEB.value = sessionStorage.getItem("Web");
+      $PASSWORD.value = sessionStorage.getItem("Password");
+
     }
   
     function isValidDNI(dNI) {

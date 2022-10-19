@@ -6,8 +6,28 @@
   const $TELEFONO = document.getElementById("IMPtelefono");
   const $COMENTARIO = document.getElementById("comentario");
   const $HORA = document.getElementById("IMPhora");
+  const $COOKIE = document.getElementById("IMPcookie");
 
-  function handleSubmit(e) {
+function mostrar() {
+
+let cont = getCookie("Errores");
+
+    (cont != "") ? setCookie("Errores", ++cont, 1) : setCookie("Errores", 1, 1);
+
+    $COOKIE.value = getCookie("Errores");
+
+  }
+
+function reiniciar() {
+
+setCookie("Errores", 0, 1); 
+
+$COOKIE.value = 0;
+
+  }
+
+function handleSubmit(e) {
+
     e.preventDefault();
 
     const dni = $DNI.value; //utilizamos .value para referirnos al valor del objeto en sí, no a su referencia en memoria
@@ -30,7 +50,8 @@
     console.log(regUsuario)
     let newUser = JSON.stringify(regUsuario)
     console.log(newUser)
-  }
+
+}
 
   function isValidDNI(dNI) {
     const validacion = /^\d{8}[a-zA-Z]$/
