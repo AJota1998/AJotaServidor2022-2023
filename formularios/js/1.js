@@ -37,7 +37,7 @@ function handleSubmit(e) {
     const comentario = $COMENTARIO.value;
     const hora = $HORA.value;
 
-    (dni == false || isValidDNI(dni) == false) ? alert("DNI Formato (99.999.999-X)") : 
+    (dni == false || isValidDNI(dni) == false) ? alert("DNI sin formato (99.999.999-X)\nO letra incorrecta") : 
     (nombre == false || isValidNombre(nombre) == false) ? alert("Mínimo 1 nombre, máximo 2") : 
     (apellidos == false || isValidApellidos(apellidos) == false) ? alert("Mínimo 1 apellido, máximo 2") : 
     (telefono == false || isValidTelefono(telefono) == false) ? alert("Teléfono formato (+34 954756898)") : 
@@ -53,9 +53,26 @@ function handleSubmit(e) {
 
 }
 
-  function isValidDNI(dNI) {
+  function isValidDNI(dni) {
+    let numero;
+    let letraUsuario;
+    let letra;
     const validacion = /^\d{8}[a-zA-Z]$/
-    return validacion.test(dNI)
+
+    if(validacion.test(dni) == true) {
+      numero = dni.substr(0,dni.length-1);
+      letraUsuario = dni.substr(dni.length-1,1);
+      numero = numero%23;
+      letra="TRWAGMYFPDXBNJZSQVHLCKET";
+      letra=letra.substring(numero,numero+1);
+        if (letra!=letraUsuario.toUpperCase()) {
+          return false;
+        } else {
+          return true;
+        }
+    } else {
+      return false;
+    }
     }
 
     function isValidNombre(name) {
