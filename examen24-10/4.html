@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ej 4 examen</title>
+    <script defer src="js/4.js"></script>
+</head>
+<body>
+
+    <fieldset style="width: 35%;">
+        <legend>Formulario</legend>
+            <form id="formulario1">
+                <div>
+                    <label for="labeldni">DNI: </label>
+                    <input type="text" id="impdni">
+                </div>
+                <div>
+                    <label for="name">Nombre y apellidos: </label>
+                    <input type="text" id="impnombre">
+                </div>
+                <div>
+                    <label for="fecha">Fecha: </label>
+                    <input type="tex" id="impfecha">
+                </div>
+                <div>
+                    <label for="hora">Hora de cita: </label>
+                    <input type="time" id="imphora">
+                </div>
+                <div>
+                    <label for="medio">Medio confirmación: </label>
+                    <input type="tex" id="impmovil" placeholder="Teléfono (+34)xxxxxxxxx">
+                    <input type="text" id="impemail" placeholder="Email xxx@xxx.xxx">
+                </div>
+                <div>
+                    <input type="submit" id="impsubmit" value="validar">
+                </div>
+            </form>
+            <input type="button" id="imprecargar" value="recargar" onclick="recargar()">
+    </fieldset>
+</body>
+</html>
