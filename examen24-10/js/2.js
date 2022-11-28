@@ -1,6 +1,4 @@
-function cadena() {
-
-    let cadena = prompt("Introduzca la cadena");
+module.exports.cadena = (cadena) => {
 
     if (cadena != "") {
 
@@ -17,10 +15,10 @@ function cadena() {
     let resultado = "Primera palabra: " + miarray[0] + "\nÚltima palabra: " + elementofinal + 
     "\nNúmero de palabras: " + contadorPalabras + "\nOrdenadas: " + ordenadas;
     
-    alert(resultado);
+    return resultado;
 
     } else {
-        alert("Cadena vacía")
+        return "Cadena vacía";
     }
 
 }
