@@ -5,8 +5,155 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Node</title>
+    <link rel="stylesheet" href="styles/node.css">
 </head>
 <body>
+
+    <header>
+        <img class="logo" src="img/monitor.png" alt="logo we learning">        
+        <h1>e learning</h1>
+                <div>
+                <img class="avatar" src="img/avatar.png" alt="logo avatar">
+                <img class="menuh" src="img/menu.png" alt="menu hamburguesa">
+            </div>
+       </header>
+       <nav>
+        <ul>
+            <a href="index.html"><li>Inicio</li></a>
+        </ul>
+   </nav>
+
+   <h1>¿Qué es NodeJS?</h1>
+   
+   <article>
+        <div>
+            <p>Node.js es un entorno de tiempo de ejecución de JavaScript (de ahí su terminación en .js haciendo alusión al lenguaje JavaScript). Este entorno de tiempo de ejecución en tiempo real incluye todo lo que se necesita para ejecutar un programa escrito en JavaScript. También aporta muchos beneficios y soluciona muchísimos problemas, por lo que sería más que interesante realizar nuestro curso de Node.js para obtener las bases, conceptos y habilidades necesarias que nos motiven a profundizar en sus opciones e iniciar la programación. </p>
+        </div>
+        <img src="img/developer.png" alt="developer">
+   </article>
+
+   <h1>¿Para qué sirve Node.js?</h1>
+
+   <article>
+    <div>
+        <p>Node.js utiliza un modelo de entrada y salida sin bloqueo controlado por eventos que lo hace ligero y eficiente (con entrada nos referimos a solicitudes y con salida a respuestas). Puede referirse a cualquier operación, desde leer o escribir archivos de cualquier tipo hasta hacer una solicitud HTTP. </p>
+    </div>
+    <div>
+        <p>La finalidad de Node.js no tiene su objetivo en operaciones intensivas del procesador, de hecho, usarlo para programación de más peso eliminará casi todas sus ventajas. Donde Node.js realmente brilla es en la creación de aplicaciones de red rápidas, ya que es capaz de manejar una gran cantidad de conexiones simultáneas con un alto nivel de rendimiento, lo que equivale a una alta escalabilidad.</p>
+    </div>
+   </article>
+
+   <h1>¿Cómo funciona Node.js?</h1>
+
+   <article>
+    <div>
+        <p>El funcionamiento interno del entorno de ejecución para JavaScript, Node.js, es bastante interesante. En comparación con las técnicas tradicionales de servicio web donde cada conexión (que crea una solicitud) genera un nuevo subproceso, ocupando la RAM del sistema y regularmente maximizando la cantidad de RAM disponible, Node.js opera en un solo subproceso, utilizando el modelo entrada y entrada sin bloqueo de la salida, lo que le permite soportar decenas de miles de conexiones al mismo tiempo mantenidas en el bucle de eventos. El nodo está completamente controlado por eventos. Resumiendo podemos decir que el servidor consta de un subproceso que procesa un evento tras otro. </p>
+    </div>
+    <div>
+        <p>Cuando hay una nueva solicitud se genera un tipo de evento. El servidor empieza a procesarlo y, cuando hay una operación de bloqueo de entrada y salida, no espera hasta que se complete y en su lugar crea una función de devolución de llamada. El servidor comienza en el acto a procesar otro evento (tal vez otra solicitud) y cuando finaliza la operación de entrada y salida, continuará trabajando en la solicitud ejecutando la devolución de llamada tan pronto como tenga tiempo. </p>
+    </div>
+    <div>
+        <p>Hay que mencionar que en el nivel más bajo de codificación (código C++), encontramos varios subprocesos en Node.js: hay un grupo de eventos de entrada y salida cuyo trabajo es recibir las interrupciones de los propios eventos de entrada y salida y poner los eventos correspondientes en la cola para ser procesados por el hilo principal evitando así la posible interrupción del mismo.</p>
+    </div>
+   </article>
+
+   <h1>Instalación de Node.js</h1>
+
+   <article class="nodeversion">
+    <div>
+        <p>La instalación de Node es sencilla utilizando el paquete de instalación disponible en el sitio
+            web oficial de NodeJS: https://nodejs.org/en/.
+            Descargar el instalador del sitio web,
+            ejecutar el instalador, seguir los pasos del instalador,
+            reiniciar tu máquina.
+            Probar NodeJS desde el terminal viendo su versión usando el siguiente comando:</p>
+    </div>
+    <img src="img/node-v.png" alt="nodev">
+   </article>
+
+   <h1>Primer proyecto con Node.js</h1>
+   <h4>Vamos a crear un miniproyecto de prueba que muestre un Hola mundo</h4>
+
+   <article >
+        <div class="pnode">
+            <p>En este ejemplo tenemos un fichero principal (main.js) que lo único que
+                hace es llamar (requerir) a otro fichero secundario (impresion.js): const impresion = require('./impresion.js');
+                En impresion.js hay una orden para imprimir un texto en pantalla:
+                console.log('Hola Mundo!');</p>
+            <img class="carpetanode" src="img/carpetanode.png" alt="carpeta de node">
+        </div>
+        <div class="pnode">
+            <p>Si ya tenemos instalado Node, desde la consola donde está nuestro
+                proyecto ejecutamos el fichero: node main.js</p>
+            <img class="holamundo" src="img/holamundo.png" alt="ejemplo de hola mundo">
+        </div>
+   </article>
+
+   <h1>Ampliación Node.js</h1>
+   
+   <article>
+        <div class="pnode">
+            <h4>Gestor NPM</h4>
+            <p>npm es un gestor de paquetes de Node.js con él los desarrolladores pueden crear, compartir
+                y reutilizar desde módulos o pequeñas librerías, hasta aplicaciones completas de un
+                extenso catálogo gestionado por la comunidad.
+                Cuando se instalan nuevos paquetes desde el comando npm, se hace de forma local en
+                nuestro proyecto dentro de la carpeta /node_modules, pero también se puede instalar de
+                forma global si fuese necesario.
+                Por defecto ya vienen instalados varios módulos (módulos nativos).
+                Con este comando instalaremos los módulos que se incluirán como dependencias en el
+                fichero ‘package.json’. npm install nombre_modulo --save</p>
+            <p>Para instalar un paquete de forma global para usarse desde cualquier lugar de nuestro
+                sistema de archivos y en cualquier proyecto, lo haremos mediante el comando (necesario
+                abrir la consola como administrador):
+                npm install -g nombre_modulo
+                Para poder usar estos módulos desde nuestras aplicaciones Node.js basta con incluirlo
+                mediante la expresión:
+                var modulo = require(‘nombre_modulo’);
+                Si únicamente queremos montar una librería o utilidad para ser usada durante el desarrollo
+                de nuestra aplicación, debemos especificar el parámetro –save-dev:
+                npm install nombre_modulo –save-dev
+                Mediante este comando se incluirá el módulo en nuestro ‘package.json’, pero en un
+                apartado específico para la dependencia en entorno de desarrollo: devDependencies.</p>
+        </div>
+        <div class="pnode">
+            <h4>Package.json</h4>
+            <p>Conceptos básicos sobre NodeJS
+                Package.json
+                Cuando inicializamos el gestor npm npm init tendremos automáticamente también el fichero
+                package.json donde se definen las características principales y las dependencias de
+                nuestro proyecto con respecto a otras aplicaciones y librerías. Dentro de él se definen
+                características cómo:
+                Nombre del Proyecto,
+                versión,
+                dependencias,
+                autores,
+                licencias,
+                scripts, etc.</p>
+                <img class="package" src="img/packagejson.png" alt="package json">
+        </div>
+   </article>
+
+   <h1>Tu primer servidor Node.js</h1>
+
+   <article>
+    <div class="pnode">
+        <p>Creamos y ejecutamos el fichero que se muestra a continuación y abrimos en el navegador http://localhost:3000</p>
+        <img class="ayuda" src="img/ayuda.png" alt="ayuda">
+        <p>¡Enhorabuena, ya has desplegado tu primer proyecto con un servidor Node.js!</p>
+    </div>
+    <img class="servernode" src="img/servidornode.png" alt="servidor node">
+   </article>
+
+   <footer>
+    <div>
+        <p>+34987656721</p>
+        <p>+34922356711</p>
+        <p>welearning@hotmail.com</p>
+    </div>
+    <img src="img/download.png" alt="app disponible en">
+    <img class="rrss" src="img/rrss.png" alt="redes sociales">
+</footer>
     
 </body>
 </html>

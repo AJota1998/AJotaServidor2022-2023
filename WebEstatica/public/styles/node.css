@@ -1,0 +1,166 @@
+* {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    margin: 0.1%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: rgb(0,0,0);
+    background: linear-gradient(127deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(64,191,191,1) 25%, rgba(50,190,166,1) 25%,
+     rgba(51,190,165,1) 75%, rgba(0,0,0,1) 75%);
+}
+
+header h1 {
+    padding-left: 1%;
+    color: white;
+}
+
+header img {
+    width: 75px;
+    height: 60px;
+}
+
+.logo {
+    margin-left: 2%;
+    width: 75px;
+    height: 60px;
+}
+
+header div {
+    padding-right: 1%;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+}
+
+.menuh {
+    width: 20px;
+    height: 15px;
+}
+
+a {
+    text-decoration: none;
+    padding-left: 1%;
+}
+
+nav {
+    background-color: beige;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    padding: 1%;
+    list-style: none;
+}
+
+ul {
+    margin: 0%;
+}
+
+h1 {
+    padding-left: 1%;
+}
+
+article {
+    display: flex;
+    justify-content: space-around;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+article img {
+    width: 15%;
+    height: 10%;
+}
+
+article div p {
+    margin: 0% 3% 0% 3%;
+    text-align: justify;
+}
+
+.nodeversion {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.nodeversion img {
+    width: 40%;
+    height: 20%;
+}
+
+h4 {
+    padding-left: 1%;
+}
+
+.carpetanode {
+    width: 15%;
+    height: 45%;
+}
+
+.holamundo {
+    width: 80%;
+    height: 20%;
+}
+
+.pnode {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 1%;
+}
+
+.pnode img {
+    margin-top: 3%;
+}
+
+.package {
+    width: 95%;
+    height: 75%;
+    margin-top: 3%;
+}
+
+.servernode {
+    width: 50%;
+    height: 40%;
+    margin-bottom: 3%;
+}
+
+.ayuda {
+    height: 45%;
+    width: 30%;
+}
+
+footer {
+    background-color: blueviolet;
+    display: flex;
+    justify-content: space-around;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+}
+
+footer p {
+    padding: 0.5%;
+}
+
+footer img {
+    width: 6%;
+    height: 3%;
+    padding: 1%;
+}
+
+.rrss {
+    width: 10%;
+    height: 8%;
+}
