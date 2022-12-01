@@ -14,11 +14,13 @@ header {
     background: rgb(0,0,0);
     background: linear-gradient(127deg, rgba(0,0,0,1) 0%, rgba(0,0,0,1) 25%, rgba(64,191,191,1) 25%, rgba(50,190,166,1) 25%,
      rgba(51,190,165,1) 75%, rgba(0,0,0,1) 75%);
+     border-radius: 10px 10px 0px 0px;
 }
 
 header h1 {
     padding-left: 1%;
     color: white;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 }
 
 header img {
@@ -47,7 +49,8 @@ header div {
 }
 
 nav {
-    background-color: beige;
+    background-color: rgba(50,190,166,1);
+    box-shadow: rgba(0, 0, 0, 0.807) 0px 25px 20px -20px;
 }
 
 nav ul {
@@ -61,35 +64,17 @@ ul {
     margin: 0%;
 }
 
+ul li:hover {
+    background-color: black;
+    border-radius: 10px;
+    padding: 0.8%;
+}
+
 li {
     padding-left: 2%;
     padding-right: 2%;
-}
-
-footer {
-    background-color: blueviolet;
-    display: flex;
-    justify-content: space-around;
-}
-
-footer div {
-    display: flex;
-    flex-direction: column;
-}
-
-footer p {
-    padding: 0.5%;
-}
-
-footer img {
-    width: 6%;
-    height: 3%;
-    padding: 1%;
-}
-
-.rrss {
-    width: 10%;
-    height: 8%;
+    color: white;
+    
 }
 
 article {
@@ -97,11 +82,27 @@ article {
     justify-content: space-between;
 }
 
+.boton {
+    width: 100%;
+    height: 50%;
+    border: solid 2px black;
+    border-radius: 5px;
+    background-color: rgba(50,190,166,1);
+    color: white;
+}
+
+.boton:hover {
+        text-shadow: 0 1px 1px rgba(0,0,0,0.5);
+        background:#000000;
+        font-size: 1.2em;
+}
+
+
 article div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid 3px skyblue;
+    border: solid 3px black;
     border-radius: 10px;
     margin: 1em;
     width: 45%;
@@ -117,7 +118,7 @@ p {
 }
 
 aside {
-    border: solid 3px darkblue;
+    border: solid 3px black;
     padding: 1%;
     margin: 2%;
     border-radius: 10px;
@@ -125,7 +126,7 @@ aside {
 
 .promocion {
     text-align: center;
-    color: aquamarine;
+    color: black;
 }
 
 a {
@@ -135,5 +136,23 @@ a {
 
 .js {
     width: 5%;
+    height: 10%;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    background: rgb(50,190,166);
+    background: radial-gradient(circle, rgba(50,190,166,1) 50%, rgba(0,2,4,1) 100%);
+    color: white;
+    border-radius: 0px 0px 10px 10px;
+}
+
+footer div {
+   margin: 3% 5% 3% 5%;
+}
+
+.rrss {
+    width: 10%;
     height: 10%;
 }
