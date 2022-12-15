@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+<body>
+
+<style>
+    fieldset {
+        display: flex;
+        width: 20%;
+        margin: auto;
+        flex-direction: column;
+        border-radius: 5px;
+
+    }
+
+    fieldset div {
+        display: flex;
+        justify-content: space-between;
+        padding: 1%;
+        margin: 1%;
+    }
+
+    legend {
+        text-align: center;
+    }
+
+    .enviar {
+        width: 15%;
+    }
+</style>
+
+<form action="usuario" method="post">
+    <fieldset>
+        <legend>Formulario</legend>
+            <div>
+                <label for="dni">DNI: </label>
+                <input type="text" name="formUsuarioDNI" pattern="^\d{8}[a-zA-Z]$">
+            </div>
+            <div>
+                <label for="name">Nombre: </label>
+                <input type="text" name="formUsuarioNombre" pattern="^[a-zA-Z]+( [a-zA-Z]+)?$">   
+            </div>
+            <div>
+                <label for="name">Apellidos: </label>
+                <input type="text" name="formUsuarioApellidos" pattern="^[a-zA-Z]+( [a-zA-Z]+)?$">   
+            </div>
+            <div>
+                <label for="pass">Constraseña: </label>
+                <input type="password" name="formUsuarioPassword" pattern="^.{8,10}$">
+            </div>
+            <div>
+                <label for="email">Email: </label>
+                <input type="email" name="formUsuarioEmail">
+            </div>
+            <div>
+                <label for="telefono">Teléfono: </label>
+                <input type="tel" name="formUsuarioTelefono" pattern="^\+34[0-9]{9}$">
+            </div>
+            <input class="enviar" id="impsubmit" type="submit" value="Enviar">
+    </fieldset>
+</form>
+    
+</body>
+</html>
